@@ -18,6 +18,12 @@ public class EnemyController : MonoBehaviour
     void Start()
     {
         controller = GetComponent<CharacterController>();
+        //空中者
+        if(useGravity)
+        {
+            //空中にいる車は時間経過で消滅
+            Destroy(gameObject,20);
+        }
     }
 
 
